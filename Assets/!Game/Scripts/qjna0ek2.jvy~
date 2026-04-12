@@ -1,0 +1,150 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+csharp Assets\!Game\Scripts\SpaceCheck.cs
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class SpaceCheck : MonoBehaviour
+{
+    public Vector3 boxSize;
+    [Tooltip("—лои, которые считаютс€ преп€тствием дл€ проверки")]
+    public LayerMask obstacleLayer;
+
+    [Tooltip("—лои, которые нужно игнорировать (например, Ground)")]
+    [SerializeField] private LayerMask ignoreLayerMask;
+
+    [Tooltip("÷вет превью при невозможности поставить объект")]
+    [SerializeField] private Color invalidColor = Color.red;
+
+    public bool canPlace = true;
+
+    private List<MeshRenderer> _renderers;
+    private List<Color> _originalColors;
+
+    private void Start()
+    {
+        boxSize = transform.localScale;
+        CacheRenderersAndColors();
+    }
+
+    private void CacheRenderersAndColors()
+    {
+        _renderers = new List<MeshRenderer>();
+        _originalColors = new List<Color>();
+
+        // »щем рендереры у родительского здани€ (SpaceCheck обычно лежит в дочернем объекте)
+        var building = GetComponentInParent<Building>();
+        if (building != null)
+            _renderers.AddRange(building.GetComponentsInChildren<MeshRenderer>(true));
+        else
+            _renderers.AddRange(GetComponentsInChildren<MeshRenderer>(true));
+
+        foreach (var r in _renderers)
+        {
+            // »спользуем renderer.material чтобы получить экземпл€р материала дл€ данного рендера.
+            // —охран€ем текущий цвет, чтобы восстановить позже.
+            if (r != null && r.material != null)
+                _originalColors.Add(r.material.color);
+            else
+                _originalColors.Add(Color.white);
+        }
+    }
+
+    public void CanPlaceCheck()
+    {
+        Collider[] colliders = Physics.OverlapBox(transform.position, boxSize / 2f, transform.rotation, obstacleLayer);
+
+        // по умолчанию считаем, что можно ставить
+        canPlace = true;
+
+        if (colliders.Length > 0)
+        {
+            foreach (var col in colliders)
+            {
+                // игнорируем объекты на сло€х, указанных в ignoreLayerMask
+                if ((ignoreLayerMask.value & (1 << col.gameObject.layer)) != 0)
+                    continue;
+
+                // игнорируем триггерные коллайдеры (при необходимости убрать)
+                if (col.isTrigger)
+                    continue;
+
+                // нашли непроходимый объект -> нельз€ ставить
+                canPlace = false;
+                Debug.Log($"ѕреп€тствие: {col.gameObject.name} (слой {LayerMask.LayerToName(col.gameObject.layer)}, тег {col.gameObject.tag})");
+                // не делаем `return` Ч продолжим провер€ть, чтобы вывести все преп€тстви€ (можно убрать)
+            }
+        }
+        else
+        {
+            Debug.Log("ћесто пустое (нет коллайдеров в области).");
+        }
+
+        // ќбновл€ем цвет превью: красный если нельз€ ставить, иначе восстанавливаем оригинальные цвета
+        if (!canPlace)
+            ApplyPreviewColor(invalidColor);
+        else
+            RestoreOriginalColors();
+    }
+
+    private void ApplyPreviewColor(Color color)
+    {
+        if (_renderers == null || _originalColors == null)
+            CacheRenderersAndColors();
+
+        for (int i = 0; i < _renderers.Count; i++)
+        {
+            var r = _renderers[i];
+            if (r == null) continue;
+
+            // material создаЄт экземпл€р материала дл€ данного рендера Ч безопасно мен€ть цвет превью
+            if (r.material != null)
+            {
+                r.material.color = color;
+            }
+        }
+    }
+
+    private void RestoreOriginalColors()
+    {
+        if (_renderers == null || _originalColors == null) return;
+
+        for (int i = 0; i < _renderers.Count; i++)
+        {
+            var r = _renderers[i];
+            if (r == null) continue;
+
+            if (r.material != null && i < _originalColors.Count)
+            {
+                r.material.color = _originalColors[i];
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        // ¬осстанавливаем цвета при отключении компонента
+        RestoreOriginalColors();
+    }
+
+    private void OnDestroy()
+    {
+        RestoreOriginalColors();
+    }
+
+    private void Update()
+    {
+        // ќставил вызов проверки закомментированным Ч включите при необходимости
+        // CanPlaceCheck();
+    }
+
+    // ƒл€ отладки: визуализируем область проверки в сцене
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = canPlace ? new Color(0, 1, 0, 0.25f) : new Color(1, 0, 0, 0.25f);
+        Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+        Gizmos.DrawCube(Vector3.zero, boxSize);
+    }
+}
