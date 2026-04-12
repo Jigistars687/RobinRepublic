@@ -1,17 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    [Header("Настройки")]
-    [Tooltip("Точное название сцены, которую нужно запустить")]
-    public string _sceneToLoad = "GameScene";
+    [SerializeField] private Button _gameplayButton;
+    [SerializeField] private Button _mainMenuButton;
 
-    public void PlayGame()
+
+    private string _gameplay = "GameScene";
+    private string _mainMenu = "MainMenu";
+
+    private void OnEnable()
     {
-        SceneManager.LoadScene(_sceneToLoad);
+        if (_gameplayButton != null) _gameplayButton.onClick.AddListener(() => LoadScene(_gameplay));
+        if (_mainMenuButton != null) _mainMenuButton.onClick.AddListener(() => LoadScene(_mainMenu));
     }
 
+    private void OnDisable()
+    {
+        if (_gameplayButton != null) _gameplayButton.onClick.RemoveAllListeners(); 
+        if ( _mainMenuButton != null) _mainMenuButton.onClick.RemoveAllListeners();
+    }
+
+    private void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    
     public void QuitGame()
     {
         Application.Quit();
