@@ -13,7 +13,7 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private PlayerInputsControler _playerInputsControler;
 
-    private string _gameplay = "GameScene";
+    private string _gameplay = "Game";
     private string _mainMenu = "MainMenu";
 
     private void OnEnable()
