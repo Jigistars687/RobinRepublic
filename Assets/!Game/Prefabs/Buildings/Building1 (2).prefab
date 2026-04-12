@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3451318675745878129}
   - component: {fileID: 7536269975307203481}
   - component: {fileID: 1920461216545206480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2423298221640867761}
-  m_Layer: 0
+  - component: {fileID: 6073859105253059896}
+  - component: {fileID: -7788628329581950080}
+  m_Layer: 7
   m_Name: Building1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,3 +146,35 @@ Transform:
   - {fileID: 2791826510781160666}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6073859105253059896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146490736120591373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d158a438443c0ba4dbe004986b37cf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectebleObject
+  _fieldConfig: {fileID: 11400000, guid: b9ff66852acf59946aeb55dbf80f6483, type: 2}
+  _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
+  _meshRenderer: {fileID: 7536269975307203481}
+  XSize: 2
+  ZSize: 2
+  _isVisible: 1
+--- !u!114 &-7788628329581950080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146490736120591373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c242a7dfc8db67344b9dadf123f2d3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Building1TEST
+  _scaleMultiplier: 1.2
+  _duration: 0.2

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 29561079479547654}
   - component: {fileID: 5992133323066492016}
   - component: {fileID: 3505105621417100776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7241463333854143932}
   - component: {fileID: 7840128940527153702}
   - component: {fileID: 4559493164057256012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Building1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   _meshRenderer: {fileID: 5992133323066492016}
   XSize: 2
   ZSize: 2
-  _isVisible: 0
+  _isVisible: 1
 --- !u!114 &4559493164057256012
 MonoBehaviour:
   m_ObjectHideFlags: 0

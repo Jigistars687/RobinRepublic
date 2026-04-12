@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1140fa3fc3427e545a8cb262b22e85a6, type: 3}
-  m_Name: BuildingTEst1
+  m_Name: TEST2
   m_EditorClassIdentifier: Assembly-CSharp::BuildingConfig
-  Price: 100
-  Description: Cube
-  Category: Cube
+  Price: 50
+  Description: w
+  Category: w
   Icon: {fileID: 0}
-  Prefab: {fileID: 1892069547552043724, guid: da490f330efef234b912448af6b2d00a, type: 3}
-  PreviewPrefab: {fileID: 4617327787912946186, guid: adfc2efc5c803af47beb3a7178fa493d, type: 3}
+  Prefab: {fileID: 9146490736120591373, guid: 8280a9ccbb42c5f44a89c21f2a0b5403, type: 3}
+  PreviewPrefab: {fileID: 5966399188833260039, guid: f4e002026cc7d644ab3da3ec895b7e82, type: 3}

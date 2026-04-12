@@ -32,7 +32,7 @@ public class BuilderPlacer : MonoBehaviour
             pos.y = 0.10f;
             _currentBuilding.transform.position = pos;
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0))
             {
                 SpaceCheck check = _currentBuilding.GetComponentInChildren<SpaceCheck>();
                 if (check != null)
