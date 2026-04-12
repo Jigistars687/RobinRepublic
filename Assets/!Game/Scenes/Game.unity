@@ -1851,7 +1851,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1920, y: 274}
+  m_SizeDelta: {x: 1920, y: 209.8583}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1822768161
 MonoBehaviour:
@@ -2160,6 +2160,7 @@ GameObject:
   - component: {fileID: 2056907320}
   - component: {fileID: 2056907319}
   - component: {fileID: 2056907322}
+  - component: {fileID: 2056907323}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2285,6 +2286,27 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &2056907323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056907318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f0320879103941bd2335fe68c2b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
+  config:
+    panSpeed: 100
+    zoomSpeed: 750
+    minX: -100
+    maxX: 100
+    minZ: -100
+    maxZ: 100
+    minY: 10
+    maxY: 60
 --- !u!1 &2115421096
 GameObject:
   m_ObjectHideFlags: 0
