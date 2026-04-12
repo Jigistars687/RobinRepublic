@@ -17,4 +17,4 @@ MonoBehaviour:
   Category: 
   Icon: {fileID: 0}
   Prefab: {fileID: 6299757242437773426, guid: 6f62f7002d5d20447a52e2734e8cf321, type: 3}
-  PreviewPrefab: {fileID: 0}
+  PreviewPrefab: {fileID: 6299757242437773426, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}

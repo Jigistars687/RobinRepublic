@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1140fa3fc3427e545a8cb262b22e85a6, type: 3}
-  m_Name: Building_Grid
+  m_Name: Besedka
   m_EditorClassIdentifier: Assembly-CSharp::BuildingConfig
-  Price: 100
-  Prefab: {fileID: 2301084585667194347, guid: d07d0a19a7802e04492798f435dc76d6, type: 3}
-  PreviewPrefab: {fileID: 2301084585667194347, guid: c7e4a6e65547fc34dbb8f9ae45443570, type: 3}
+  Price: 50
+  Description: 
+  Category: 
+  Icon: {fileID: 0}
+  Prefab: {fileID: 7622646409339311522, guid: c1f175101b45e9046b888e849ee8dadd, type: 3}
+  PreviewPrefab: {fileID: 7622646409339311522, guid: c91697182f8619a4fb40367238f66ca0, type: 3}

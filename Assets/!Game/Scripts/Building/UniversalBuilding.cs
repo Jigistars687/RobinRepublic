@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayGround : Building
+public class UniversalBuilding : Building
 {
     [SerializeField] private float _scaleMultiplier = 1.2f;
     [SerializeField] private float _duration = 0.2f;

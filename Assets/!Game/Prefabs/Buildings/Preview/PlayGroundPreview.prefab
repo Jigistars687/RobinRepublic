@@ -9,15 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6743791363226007050}
-  - component: {fileID: 730729082483575237}
-  - component: {fileID: 1821504972589776066}
   m_Layer: 7
-  m_Name: PlayGround
+  m_Name: PlayGroundPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6743791363226007050
 Transform:
   m_ObjectHideFlags: 0
@@ -31,44 +29,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 3644770789196373612}
   - {fileID: 5912817714260405393}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &730729082483575237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6299757242437773426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d158a438443c0ba4dbe004986b37cf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectebleObject
-  _fieldConfig: {fileID: 11400000, guid: b9ff66852acf59946aeb55dbf80f6483, type: 2}
-  _buildingPreview: {fileID: 4066516192563118100}
-  _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
-  _meshRenderer: {fileID: 0}
-  _parentObject: {fileID: 6764267928835476806}
-  XSize: 8
-  ZSize: 8
-  _isVisible: 1
---- !u!114 &1821504972589776066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6299757242437773426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86b7b8e9e912e543b64f850ae29924b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayGround
-  _scaleMultiplier: 1.2
-  _duration: 0.2
 --- !u!1 &6764267928835476806
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +86,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5912817714260405393}
     m_Modifications:
+    - target: {fileID: 1730274793493199149, guid: a76d38f7a30f08d48902763765dfe496, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
+    - target: {fileID: 2047347075545181639, guid: a76d38f7a30f08d48902763765dfe496, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 2250473121370442014, guid: a76d38f7a30f08d48902763765dfe496, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -265,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence
@@ -273,6 +248,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -351,6 +330,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (1)
@@ -359,6 +342,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -385,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 60437026472557657, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 7144424505652157252, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -511,6 +502,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (3)
@@ -519,6 +514,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -553,6 +552,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2507990812083353852, guid: 0b6126c251f192046b4d4e0ab0e19592, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5229713305212606979, guid: 0b6126c251f192046b4d4e0ab0e19592, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.45199
@@ -623,6 +626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5912817714260405393}
     m_Modifications:
+    - target: {fileID: 60437026472557657, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 7144424505652157252, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -749,6 +756,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (6)
@@ -757,6 +768,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -835,6 +850,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (4)
@@ -843,6 +862,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -865,6 +888,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5912817714260405393}
     m_Modifications:
+    - target: {fileID: 60437026472557657, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 7144424505652157252, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -991,6 +1018,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (7)
@@ -999,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1021,6 +1056,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5912817714260405393}
     m_Modifications:
+    - target: {fileID: 1730274793493199149, guid: a76d38f7a30f08d48902763765dfe496, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
+    - target: {fileID: 2047347075545181639, guid: a76d38f7a30f08d48902763765dfe496, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 2250473121370442014, guid: a76d38f7a30f08d48902763765dfe496, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1107,6 +1150,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5912817714260405393}
     m_Modifications:
+    - target: {fileID: 60437026472557657, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 7144424505652157252, guid: 33d0bab0ca4b881469611efa5761168c, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1233,6 +1280,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (5)
@@ -1241,6 +1292,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1319,6 +1374,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4646268063399747080, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 5238613158717728539, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Name
       value: Playground_Fence (2)
@@ -1327,6 +1386,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7240104460211243995, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 8659668247826549217, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1340,71 +1403,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2269612051913635611, guid: 0a176e1509f0e304cb1d2318ed9e146e, type: 3}
   m_PrefabInstance: {fileID: 7833071366622982930}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7998974833627752550
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6743791363226007050}
-    m_Modifications:
-    - target: {fileID: 6299757242437773426, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_Name
-      value: PlayGroundPreview
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
---- !u!4 &3644770789196373612 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6743791363226007050, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-  m_PrefabInstance: {fileID: 7998974833627752550}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4066516192563118100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6299757242437773426, guid: 1004de1b8daa3534897bb3c5d51b764e, type: 3}
-  m_PrefabInstance: {fileID: 7998974833627752550}
   m_PrefabAsset: {fileID: 0}
