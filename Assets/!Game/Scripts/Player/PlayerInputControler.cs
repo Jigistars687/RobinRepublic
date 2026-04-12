@@ -19,13 +19,11 @@ public class PlayerInputsControler : MonoBehaviour
             PauseGame();
         }
     }
-    private void PauseGame()
+    public void PauseGame()
     {
         _isPaused = !_isPaused;
         _pauseMenu.SetActive(_isPaused);
         _mainUI.SetActive(!_isPaused);
-        Cursor.lockState = _isPaused ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = _isPaused;
 
     }
 }
