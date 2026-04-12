@@ -801,7 +801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 104.92914}
+  m_AnchoredPosition: {x: 960, y: 0}
   m_SizeDelta: {x: 1920, y: 209.8583}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &57113802
@@ -886,7 +886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &62772070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 643602612}
-  - {fileID: 627443397}
+  - {fileID: 915172796}
   m_Father: {fileID: 1083233482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -1354,7 +1354,7 @@ GameObject:
   - component: {fileID: 164719083}
   - component: {fileID: 164719082}
   m_Layer: 5
-  m_Name: Besedka Button
+  m_Name: Fountain Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2022,6 +2022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWallet
   _startingMoney: 3000
+  _moneyText: {fileID: 2032610568}
 --- !u!114 &329671984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,7 +2112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0414\u0435\u0442\u0441\u043A\u0430\u044F \u043F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+  m_text: "\u0441\u043A\u0430\u043C\u0435\u0439\u043A\u0430 \u0441\u0435\u0440\u0434\u0446\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7e04325baa6e9c4b9bb43456ddd40b9, type: 2}
   m_sharedMaterial: {fileID: -404030790725869590, guid: c7e04325baa6e9c4b9bb43456ddd40b9, type: 2}
@@ -2241,7 +2242,6 @@ MonoBehaviour:
     m_Bits: 64
   _fieldConfig: {fileID: 11400000, guid: b9ff66852acf59946aeb55dbf80f6483, type: 2}
   _undoButton: {fileID: 915172797}
-  _rotateButton: {fileID: 0}
 --- !u!1 &417839640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &486069744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,126 +3084,6 @@ Transform:
   - {fileID: 486069747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &627443396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 627443397}
-  - component: {fileID: 627443400}
-  - component: {fileID: 627443399}
-  - component: {fileID: 627443398}
-  m_Layer: 5
-  m_Name: Rotate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &627443397
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627443396}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 62772070}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -511, y: -80.843}
-  m_SizeDelta: {x: 178.2689, y: 178.27}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &627443398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627443396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 627443399}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &627443399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627443396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ac00ef2ec3b19a4295f19e948e0c260, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &627443400
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627443396}
-  m_CullTransparentMesh: 1
 --- !u!1 &634078561
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,7 +4212,7 @@ GameObject:
   - component: {fileID: 893016046}
   - component: {fileID: 893016045}
   m_Layer: 5
-  m_Name: PlayGround Button
+  m_Name: HeartBench Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4472,11 +4352,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 533029983}
-  m_Father: {fileID: 1819340383}
+  m_Father: {fileID: 62772070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 654, y: 187.89519}
+  m_AnchoredPosition: {x: -216, y: -2.0247955}
   m_SizeDelta: {x: 228.5228, y: 174.2105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915172797
@@ -4695,7 +4575,7 @@ GameObject:
   - component: {fileID: 925296272}
   - component: {fileID: 925296271}
   m_Layer: 5
-  m_Name: PlayGround
+  m_Name: HeartBench
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4734,7 +4614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuyButton
   _button: {fileID: 893016045}
-  _buildingConfig: {fileID: 11400000, guid: fcb9393a789066641a3f0cd4a6d756cb, type: 2}
+  _buildingConfig: {fileID: 11400000, guid: 084aa167ec5e0d54eae28d975d33c4ef, type: 2}
   _builderPlacer: {fileID: 394075738}
   _moneyText: {fileID: 2032610568}
 --- !u!114 &925296272
@@ -5942,7 +5822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0411\u0435\u0441\u0435\u0434\u043A\u0430"
+  m_text: "\u0424\u043E\u043D\u0442\u0430\u043D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7e04325baa6e9c4b9bb43456ddd40b9, type: 2}
   m_sharedMaterial: {fileID: -404030790725869590, guid: c7e04325baa6e9c4b9bb43456ddd40b9, type: 2}
@@ -7293,7 +7173,6 @@ RectTransform:
   - {fileID: 57113801}
   - {fileID: 1382303615}
   - {fileID: 1766980224}
-  - {fileID: 915172796}
   m_Father: {fileID: 1083233482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -8010,7 +7889,7 @@ GameObject:
   - component: {fileID: 2019797130}
   - component: {fileID: 2019797129}
   m_Layer: 5
-  m_Name: Besedka
+  m_Name: Fountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8049,7 +7928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuyButton
   _button: {fileID: 164719082}
-  _buildingConfig: {fileID: 11400000, guid: ddedfcc29c67d8f43b78ee309a5b36c5, type: 2}
+  _buildingConfig: {fileID: 11400000, guid: 21f3926cd88d4cf4ba226f806edf9bf4, type: 2}
   _builderPlacer: {fileID: 394075738}
   _moneyText: {fileID: 2032610568}
 --- !u!114 &2019797130
