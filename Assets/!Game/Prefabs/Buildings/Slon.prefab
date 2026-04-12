@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290077856189124691}
   - component: {fileID: 8732013028908001161}
+  - component: {fileID: 6529177561938705784}
   m_Layer: 0
   m_Name: Slon
   m_TagString: Untagged
@@ -54,6 +55,20 @@ MonoBehaviour:
   XSize: 2
   ZSize: 2
   _isVisible: 1
+--- !u!114 &6529177561938705784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266346716888944271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86b7b8e9e912e543b64f850ae29924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UniversalBuilding
+  _scaleMultiplier: 1.2
+  _duration: 0.2
 --- !u!1001 &214518636076986414
 PrefabInstance:
   m_ObjectHideFlags: 0

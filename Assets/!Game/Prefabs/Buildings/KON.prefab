@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3934794476839728804}
   - component: {fileID: 1207128475505096850}
+  - component: {fileID: 2370498014907938563}
   m_Layer: 0
   m_Name: KON
   m_TagString: Untagged
@@ -54,6 +55,20 @@ MonoBehaviour:
   XSize: 2
   ZSize: 2
   _isVisible: 1
+--- !u!114 &2370498014907938563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678140459107344150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86b7b8e9e912e543b64f850ae29924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UniversalBuilding
+  _scaleMultiplier: 1.2
+  _duration: 0.2
 --- !u!1001 &9031844751370459577
 PrefabInstance:
   m_ObjectHideFlags: 0
