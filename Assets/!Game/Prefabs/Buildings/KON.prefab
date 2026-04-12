@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4678140459107344150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.26038, y: 0.00001, z: -271.2664}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -52,8 +52,8 @@ MonoBehaviour:
   _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
   _meshRenderer: {fileID: 3905523102377105541}
   _parentObject: {fileID: 0}
-  XSize: 2
-  ZSize: 2
+  XSize: 3
+  ZSize: 3
   _isVisible: 1
 --- !u!114 &2370498014907938563
 MonoBehaviour:
@@ -86,16 +86,28 @@ PrefabInstance:
       value: Park-Installation3 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4903793
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0012000711
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3363953
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalRotation.w
@@ -153,16 +165,28 @@ PrefabInstance:
       value: Park-Installation3
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4903793
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0012000711
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3363953
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6458346876324047480, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
       propertyPath: m_LocalRotation.w

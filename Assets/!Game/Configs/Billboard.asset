@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140fa3fc3427e545a8cb262b22e85a6, type: 3}
   m_Name: Billboard
   m_EditorClassIdentifier: Assembly-CSharp::BuildingConfig
-  Price: 0
+  Price: 50
   Description: 
   Category: 
   Icon: {fileID: 0}
   Prefab: {fileID: 7983902551273661252, guid: d656e5d662b73214eaac7f0557218879, type: 3}
-  PreviewPrefab: {fileID: 7983902551273661252, guid: 85f30898e38000947bfd4ba1a4038a9e, type: 3}

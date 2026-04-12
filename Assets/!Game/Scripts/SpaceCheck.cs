@@ -17,12 +17,10 @@ public class SpaceCheck : MonoBehaviour
     private List<MeshRenderer> _renderers;
     private List<Color> _originalColors;
 
-    // Ссылка на центральный collider, если найден
     private BoxCollider _centralCollider;
 
     private void Start()
     {
-        // По умолчанию берем локальную масштабировку объекта (на случай, если центрального коллайдера нет)
         _boxSize = transform.localScale;
         CacheRenderersAndColors();
         TryGetCentralCollider();
@@ -68,7 +66,6 @@ public class SpaceCheck : MonoBehaviour
 
         if (_centralCollider != null && _centralCollider.enabled)
         {
-            // Размер в мировых координатах учитывая lossyScale
             Vector3 worldSize = Vector3.Scale(_centralCollider.size, _centralCollider.transform.lossyScale);
             halfExtents = worldSize / 2f;
             center = _centralCollider.transform.TransformPoint(_centralCollider.center);
@@ -157,8 +154,6 @@ public class SpaceCheck : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = canPlace ? new Color(0, 1, 0, 0.25f) : new Color(1, 0, 0, 0.25f);
-
-        // Пытаемся получить центр/размер от центрального collider'а
         try
         {
             if (_centralCollider == null)
@@ -172,7 +167,7 @@ public class SpaceCheck : MonoBehaviour
                 return;
             }
         }
-        catch { /* не критично для редактора */ }
+        catch {}
 
         Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
         Gizmos.DrawCube(Vector3.zero, _boxSize);

@@ -8,7 +8,7 @@ public class SelectebleObject : MonoBehaviour
     [SerializeField] private GameObject _buildingPreview;
     [SerializeField] private GameObject _gridTexture;
     [SerializeField] private MeshRenderer _meshRenderer;
-    [SerializeField] private GameObject _parentObject; [Tooltip("родительский объект на случай отстувия мешрендерера")]
+    [SerializeField] private GameObject _parentObject;  
 
     public int XSize = 2;
     public int ZSize = 2;

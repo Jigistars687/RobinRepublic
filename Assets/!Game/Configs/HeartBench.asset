@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140fa3fc3427e545a8cb262b22e85a6, type: 3}
   m_Name: HeartBench
   m_EditorClassIdentifier: Assembly-CSharp::BuildingConfig
-  Price: 0
+  Price: 100
   Description: 
   Category: 
   Icon: {fileID: 0}
   Prefab: {fileID: 3697179558583563622, guid: 8c78e2bfb84fba34b85a3e1969dffc03, type: 3}
-  PreviewPrefab: {fileID: 3697179558583563622, guid: ee72d7a9ee7e4864a8e39fbec22a09b9, type: 3}

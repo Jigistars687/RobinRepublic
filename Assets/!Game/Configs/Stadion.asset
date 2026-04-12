@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140fa3fc3427e545a8cb262b22e85a6, type: 3}
   m_Name: Stadion
   m_EditorClassIdentifier: Assembly-CSharp::BuildingConfig
-  Price: 0
+  Price: 1000
   Description: 
   Category: 
   Icon: {fileID: 0}
   Prefab: {fileID: 1759332500997499730, guid: d14dd4f73ca2fdc4caade7629e3d503c, type: 3}
-  PreviewPrefab: {fileID: 1759332500997499730, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}

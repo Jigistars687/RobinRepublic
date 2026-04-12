@@ -107,10 +107,6 @@ public class BuilderPlacer : MonoBehaviour
             PlayerWallet.Instance.Add(_currentBuildingPrice);
         }
 
-        // ЗАМЕЧАНИЕ: Предполагается, что деньги списываются (PlayerWallet.Instance.TrySpend)
-        // в том скрипте, который вызывает этот метод (например, в кнопке UI). 
-        // Если нет, вы можете добавить списание прямо сюда.
-
         GameObject newBuilding = Instantiate(buildingConfig.Prefab, startPos, Quaternion.identity);
         _currentBuilding = newBuilding.GetComponent<Building>();
         _currentBuildingPrice = buildingConfig.Price;
