@@ -11,5 +11,5 @@ public class BuildingConfig : ScriptableObject
     public Image Icon;
 
     public GameObject Prefab;
-    public GameObject PreviewPrefab;
+    //public GameObject PreviewPrefab;
 }

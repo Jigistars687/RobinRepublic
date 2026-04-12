@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2633316420203035399}
   - component: {fileID: 2781691972020802610}
   - component: {fileID: -7954372018498317347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Park Fountain 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,8 +52,8 @@ MonoBehaviour:
   _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
   _meshRenderer: {fileID: 0}
   _parentObject: {fileID: 8257186246806728399}
-  XSize: 2
-  ZSize: 2
+  XSize: 4
+  ZSize: 4
   _isVisible: 1
 --- !u!114 &-7954372018498317347
 MonoBehaviour:
@@ -78,7 +78,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7493123153288413975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +109,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2633316420203035399}
     m_Modifications:
+    - target: {fileID: 2273129642558524345, guid: 7247d73624870494a8cab325229c139d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4843519071492772451, guid: 7247d73624870494a8cab325229c139d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -151,7 +155,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223175297475037401, guid: 7247d73624870494a8cab325229c139d, type: 3}
       propertyPath: m_Name
-      value: Park-Fountain1 VariantPreview
+      value: Park-Fountain Preview
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223175297475037401, guid: 7247d73624870494a8cab325229c139d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679441458098668286, guid: 7247d73624870494a8cab325229c139d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866736572699945266, guid: 7247d73624870494a8cab325229c139d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -176,6 +192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7493123153288413975}
     m_Modifications:
+    - target: {fileID: 2273129642558524345, guid: 0516d3ad1a3fdae4fb01cee4c7171c76, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4843519071492772451, guid: 0516d3ad1a3fdae4fb01cee4c7171c76, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -220,8 +240,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Park Fountain
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1074876056110180873, guid: 0516d3ad1a3fdae4fb01cee4c7171c76, type: 3}
+    - target: {fileID: 5223175297475037401, guid: 0516d3ad1a3fdae4fb01cee4c7171c76, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679441458098668286, guid: 0516d3ad1a3fdae4fb01cee4c7171c76, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866736572699945266, guid: 0516d3ad1a3fdae4fb01cee4c7171c76, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
