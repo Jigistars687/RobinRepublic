@@ -21,47 +21,50 @@ public class SelectebleObject : MonoBehaviour
 
     public void GridCells()
     {
-            if (_meshRenderer  == null) _parentObject.SetActive(false);
-            else _meshRenderer.enabled = false;
+        if (_meshRenderer == null) 
+            _parentObject.SetActive(false);
+        else 
+            _meshRenderer.enabled = false;
 
-            if (_fieldConfig == null) return;
+        if (_fieldConfig == null) return;
 
-            int targetNum = XSize * ZSize;
-            _gridCells = new GameObject[targetNum];
+        int targetNum = XSize * ZSize;
+        _gridCells = new GameObject[targetNum];
 
-            Vector3 startOffset = new Vector3((XSize - 1) * 0.5f, 0, (ZSize - 1) * 0.5f) * _fieldConfig.CellSize;
+        Vector3 startOffset = new Vector3((XSize - 1) * 0.5f, 0, (ZSize - 1) * 0.5f) * _fieldConfig.CellSize;
 
-            int index = 0;
-            for (int x = 0; x < XSize; x++)
+        int index = 0;
+        for (int x = 0; x < XSize; x++)
+        {
+            for (int z = 0; z < ZSize; z++)
             {
-                for (int z = 0; z < ZSize; z++)
-                {
-                    Vector3 offset = new Vector3(x, 0, z) * _fieldConfig.CellSize - startOffset;
-                    GameObject cell = Instantiate(_gridTexture, transform.position + offset, Quaternion.identity, transform);
-                    cell.transform.localScale = new Vector3(1, 1, 1) * _fieldConfig.CellSize;
-                    var existingCollider = cell.GetComponent<Collider>();
-                    if (existingCollider != null) Destroy(existingCollider);
+                Vector3 offset = new Vector3(x, 0, z) * _fieldConfig.CellSize - startOffset;
+                GameObject cell = Instantiate(_gridTexture, transform.position + offset, Quaternion.identity, transform);
+                cell.transform.localScale = new Vector3(1, 1, 1) * _fieldConfig.CellSize;
+                var existingCollider = cell.GetComponent<Collider>();
+                if (existingCollider != null) Destroy(existingCollider);
 
-                    _gridCells[index] = cell;
-                    index++;
-                    if (!_isVisible) Destroy(cell);
-                }
+                _gridCells[index] = cell;
+                index++;
+                if (!_isVisible) Destroy(cell);
             }
+        }
 
-            if (_centralCollider == null)
-            {
-                _central = new GameObject("GridCentralCollider");
-                _central.transform.SetParent(transform, false);
-                _central.transform.localPosition = Vector3.zero;
-                _central.transform.localRotation = Quaternion.identity;
-                _central.layer = 7;
+        if (_centralCollider == null)
+        {
+            _central = new GameObject("GridCentralCollider");
+            _central.transform.SetParent(transform, false);
+            _central.transform.localPosition = Vector3.zero;
+            _central.transform.localRotation = Quaternion.identity;
+            _central.layer = 7;
 
-                _centralCollider = _central.AddComponent<BoxCollider>();
-                _centralCollider.size = new Vector3(XSize * _fieldConfig.CellSize, _fieldConfig.CellSize, ZSize * _fieldConfig.CellSize);
-                _centralCollider.center = new Vector3(0f, _fieldConfig.CellSize * 0.5f, 0f);
-                _centralCollider.isTrigger = false;
-            }
+            _centralCollider = _central.AddComponent<BoxCollider>();
+            _centralCollider.size = new Vector3(XSize * _fieldConfig.CellSize, _fieldConfig.CellSize, ZSize * _fieldConfig.CellSize);
+            _centralCollider.center = new Vector3(0f, _fieldConfig.CellSize * 0.5f, 0f);
+            _centralCollider.isTrigger = false;
+        }
     }
+
     public void ClearGrid()
     {
         if (_gridCells == null) return;
@@ -70,15 +73,26 @@ public class SelectebleObject : MonoBehaviour
         {
             if (cell != null)
             {
-                MeshRenderer _cellRenderer = cell.GetComponent<MeshRenderer>();
-                if (_cellRenderer != null)
-                    _cellRenderer.enabled = false;
-                cell.layer = 0; 
+                MeshRenderer cellRenderer = cell.GetComponent<MeshRenderer>();
+                if (cellRenderer != null)
+                {
+                    cellRenderer.enabled = false;
+                    Debug.Log($"MeshRenderer отключен для объекта: {cell.name}");
+                }
+                cell.layer = 0;
             }
         }
-        if(_meshRenderer == null) _parentObject.SetActive(false);
-        else _meshRenderer.enabled = true;
-        _central.layer = 0;
+
+        if (_meshRenderer == null) 
+            _parentObject.SetActive(true);
+        else 
+            _meshRenderer.enabled = true;
+
+        if (_central != null)
+        {
+            _central.layer = 0;
+            Debug.Log("Центральный объект обработан.");
+        }
     }
 
     private void Start()

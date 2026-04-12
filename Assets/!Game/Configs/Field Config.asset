@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe46d78dec5dbd7498c1c3c7cf8bef28, type: 3}
   m_Name: Field Config
   m_EditorClassIdentifier: Assembly-CSharp::FieldConfig
-  CellSize: 1
+  CellSize: 2

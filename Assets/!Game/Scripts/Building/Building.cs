@@ -5,7 +5,7 @@ public class Building : MonoBehaviour
     public virtual void Place()
     {
         PreviewMarker previewMarker = GetComponent<PreviewMarker>();
-        MeshRenderer _renderer = GetComponentInChildren<MeshRenderer>();
+        MeshRenderer _renderer = GetComponent<MeshRenderer>();
         SelectebleObject grid = GetComponent<SelectebleObject>();
         SpaceCheck check = GetComponentInChildren<SpaceCheck>();
         if ((check != null) && (grid != null))
