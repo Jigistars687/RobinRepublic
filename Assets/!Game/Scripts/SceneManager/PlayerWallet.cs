@@ -32,8 +32,6 @@ public class PlayerWallet : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Money = _startingMoney;
     }
-
-    // Попытаться списать сумму — возвращает true если удалось
     public bool TrySpend(int amount)
     {
         if (amount <= 0) return true;
@@ -47,8 +45,6 @@ public class PlayerWallet : MonoBehaviour
         if (amount <= 0) return;
         Money += amount;
     }
-
-    // Принудительная установка (например для отладки)
     public void Set(int amount)
     {
         Money = amount;

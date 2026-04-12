@@ -1,6 +1,6 @@
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class BuilderPlacer : MonoBehaviour
 {
@@ -9,8 +9,23 @@ public class BuilderPlacer : MonoBehaviour
     [SerializeField] private FieldConfig _fieldConfig;
 
 
-    private Building _currentBuilding = null;
+    [SerializeField] private Button _undoButton;
+    [SerializeField] private Button _rotateButton;
 
+    private Building _currentBuilding = null;
+    private int _currentBuildingPrice = 0;
+
+    private CommandHistory _commandHistory = new CommandHistory();
+    void OnEnable()
+    {
+        _undoButton.onClick.AddListener(HandleUndo);
+        _rotateButton.onClick.AddListener(() => RotateBuilding(_currentBuilding.transform));
+    }
+    private void OnDisable()
+    {
+        _undoButton.onClick.RemoveAllListeners();
+        _rotateButton.onClick.RemoveAllListeners();
+    }
     private void Start()
     {
         if (_raycastCamera == null)
@@ -19,6 +34,11 @@ public class BuilderPlacer : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            HandleUndo();
+        }
+
         if (_currentBuilding == null) return;
 
         Ray ray = _raycastCamera.ScreenPointToRay(Input.mousePosition);
@@ -43,14 +63,12 @@ public class BuilderPlacer : MonoBehaviour
                     }
                     else
                     {
-                        _currentBuilding.Place();
-                        _currentBuilding = null;
+                        ConfirmPlacement();
                     }
                 }
                 else
                 {
-                    _currentBuilding.Place();
-                    _currentBuilding = null;
+                    ConfirmPlacement();
                 }
             }
             if (Input.GetKeyDown(KeyCode.R))
@@ -60,11 +78,47 @@ public class BuilderPlacer : MonoBehaviour
         }
     }
 
+    private void ConfirmPlacement()
+    {
+        ICommand placeCommand = new PlaceBuildingCommand(_currentBuilding, _currentBuildingPrice);
+        _commandHistory.ExecuteCommand(placeCommand);
+
+        _currentBuilding = null;
+        _currentBuildingPrice = 0;
+    }
+
+    private void HandleUndo()
+    {
+        if (_currentBuilding != null)
+        {
+            Destroy(_currentBuilding.gameObject);
+            _currentBuilding = null;
+            PlayerWallet.Instance.Add(_currentBuildingPrice);
+            _currentBuildingPrice = 0;
+        }
+        else
+        {
+            _commandHistory.Undo();
+        }
+    }
+
     public void CreateBuilding(BuildingConfig buildingConfig, Vector3 startPos)
     {
+        if (_currentBuilding != null)
+        {
+            Destroy(_currentBuilding.gameObject);
+            PlayerWallet.Instance.Add(_currentBuildingPrice);
+        }
+
+        // ЗАМЕЧАНИЕ: Предполагается, что деньги списываются (PlayerWallet.Instance.TrySpend)
+        // в том скрипте, который вызывает этот метод (например, в кнопке UI). 
+        // Если нет, вы можете добавить списание прямо сюда.
+
         GameObject newBuilding = Instantiate(buildingConfig.Prefab, startPos, Quaternion.identity);
         _currentBuilding = newBuilding.GetComponent<Building>();
+        _currentBuildingPrice = buildingConfig.Price;
     }
+
     private void RotateBuilding(Transform buildingTransform)
     {
         if (LeanTween.isTweening(buildingTransform.gameObject))
@@ -73,6 +127,4 @@ public class BuilderPlacer : MonoBehaviour
         LeanTween.rotate(buildingTransform.gameObject, targetRotation, 0.2f)
                  .setEase(LeanTweenType.easeInOutSine);
     }
-
-
 }
