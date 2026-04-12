@@ -26,7 +26,7 @@ public class BuyButton : MonoBehaviour
         else
         {
             _builderPlacer.CreateBuilding(_buildingConfig, transform.position);
-            _moneyInfo += _buildingConfig.Price;
+            _moneyInfo -= _buildingConfig.Price;
             _moneyText.text = _moneyInfo.ToString();
             Debug.Log(_moneyInfo);  
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectebleObject : MonoBehaviour
 {
     [SerializeField] private FieldConfig _fieldConfig;
+    [SerializeField] private GameObject _buildingPreview;
     [SerializeField] private GameObject _gridTexture;
     [SerializeField] private MeshRenderer _meshRenderer;
     [SerializeField] private GameObject _parentObject; [Tooltip("родительский объект на случай отстувия мешрендерера")]
@@ -25,6 +26,7 @@ public class SelectebleObject : MonoBehaviour
             _parentObject.SetActive(false);
         else 
             _meshRenderer.enabled = false;
+        if (_buildingPreview != null) _buildingPreview.SetActive(true);
 
         if (_fieldConfig == null) return;
 
@@ -77,7 +79,6 @@ public class SelectebleObject : MonoBehaviour
                 if (cellRenderer != null)
                 {
                     cellRenderer.enabled = false;
-                    Debug.Log($"MeshRenderer отключен для объекта: {cell.name}");
                 }
                 cell.layer = 0;
             }
@@ -87,11 +88,11 @@ public class SelectebleObject : MonoBehaviour
             _parentObject.SetActive(true);
         else 
             _meshRenderer.enabled = true;
+        if (_buildingPreview != null) Destroy(_buildingPreview);
 
         if (_central != null)
         {
             _central.layer = 0;
-            Debug.Log("Центральный объект обработан.");
         }
     }
 

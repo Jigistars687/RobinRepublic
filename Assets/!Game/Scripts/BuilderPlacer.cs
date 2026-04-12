@@ -29,7 +29,7 @@ public class BuilderPlacer : MonoBehaviour
 
             pos.x = Mathf.Round(pos.x / _fieldConfig.CellSize) * _fieldConfig.CellSize;
             pos.z = Mathf.Round(pos.z / _fieldConfig.CellSize) * _fieldConfig.CellSize;
-            pos.y = 0.10f;
+            pos.y = 0.03f;
             _currentBuilding.transform.position = pos;
 
             if (Input.GetMouseButtonDown(0))
@@ -53,6 +53,10 @@ public class BuilderPlacer : MonoBehaviour
                     _currentBuilding = null;
                 }
             }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RotateBuilding(_currentBuilding.transform);
+            }
         }
     }
 
@@ -61,4 +65,14 @@ public class BuilderPlacer : MonoBehaviour
         GameObject newBuilding = Instantiate(buildingConfig.Prefab, startPos, Quaternion.identity);
         _currentBuilding = newBuilding.GetComponent<Building>();
     }
+    private void RotateBuilding(Transform buildingTransform)
+    {
+        if (LeanTween.isTweening(buildingTransform.gameObject))
+            return;
+        Vector3 targetRotation = buildingTransform.eulerAngles + new Vector3(0, 90, 0);
+        LeanTween.rotate(buildingTransform.gameObject, targetRotation, 0.2f)
+                 .setEase(LeanTweenType.easeInOutSine);
+    }
+
+
 }
