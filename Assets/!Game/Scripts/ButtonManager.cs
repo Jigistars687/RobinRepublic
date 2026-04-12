@@ -6,7 +6,11 @@ public class ButtonManager : MonoBehaviour
 {
     [SerializeField] private Button _gameplayButton;
     [SerializeField] private Button _mainMenuButton;
+    [SerializeField] private Button _exitButton;
 
+    [SerializeField] private Button _BackToGameButton;
+
+    [SerializeField] private PlayerInputsControler _playerInputsControler;
 
     private string _gameplay = "GameScene";
     private string _mainMenu = "MainMenu";
@@ -15,12 +19,17 @@ public class ButtonManager : MonoBehaviour
     {
         if (_gameplayButton != null) _gameplayButton.onClick.AddListener(() => LoadScene(_gameplay));
         if (_mainMenuButton != null) _mainMenuButton.onClick.AddListener(() => LoadScene(_mainMenu));
+        if (_exitButton != null) _exitButton.onClick.AddListener(QuitGame);
+        if (_BackToGameButton != null || _playerInputsControler != null) 
+            _BackToGameButton.onClick.AddListener(() => _playerInputsControler.PauseGame());
     }
 
     private void OnDisable()
     {
         if (_gameplayButton != null) _gameplayButton.onClick.RemoveAllListeners(); 
         if ( _mainMenuButton != null) _mainMenuButton.onClick.RemoveAllListeners();
+        if (_exitButton != null) _exitButton.onClick.RemoveAllListeners();
+        if (_BackToGameButton != null || _playerInputsControler != null) _BackToGameButton.onClick.RemoveAllListeners();
     }
 
     private void LoadScene(string sceneName)
