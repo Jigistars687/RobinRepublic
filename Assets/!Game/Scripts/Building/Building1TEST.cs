@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Building_Terrace : Building
+public class Building1TEST : Building
 {
     [SerializeField] private float _scaleMultiplier = 1.2f;
     [SerializeField] private float _duration = 0.2f;
@@ -19,4 +19,3 @@ public class Building_Terrace : Building
         Pulse();
     }
 }
-
