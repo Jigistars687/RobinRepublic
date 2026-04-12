@@ -8,12 +8,15 @@ public class CategoryButtons : MonoBehaviour
     [SerializeField] private Button _natureCategory;
     [SerializeField] private Button _backButton;
 
+    [SerializeField] private RectTransform _backButtonANIM;
+
     [SerializeField] private RectTransform _buildings;
     [SerializeField] private RectTransform _artObjects;
     [SerializeField] private RectTransform _nature;
     [SerializeField] private RectTransform _base;
 
     [SerializeField] private float _minusY;
+    [SerializeField] private float _backButtonActiveY;
     [SerializeField] private float _time;
 
     private RectTransform _lastCategory;
@@ -55,7 +58,7 @@ public class CategoryButtons : MonoBehaviour
 
         _lastCategory = category;
 
-        _backButton.gameObject.SetActive(category != _base);
+        AnimateBackButton(category == _base);
     }
 
     private void SetInactiveLastCategory(RectTransform lastCategory)
@@ -63,5 +66,21 @@ public class CategoryButtons : MonoBehaviour
         LeanTween.cancel(lastCategory.gameObject);
         LeanTween.moveY(lastCategory, _minusY, _time)
             .setOnComplete(() => lastCategory.gameObject.SetActive(false));
+    }
+
+    private void AnimateBackButton(bool isBaseCategory)
+    {
+        LeanTween.cancel(_backButtonANIM.gameObject);
+
+        if (isBaseCategory)
+        {
+            LeanTween.moveY(_backButtonANIM, _minusY, _time)
+                .setOnComplete(() => _backButtonANIM.gameObject.SetActive(false));
+        }
+        else
+        {
+            _backButtonANIM.gameObject.SetActive(true);
+            LeanTween.moveY(_backButtonANIM, _backButtonActiveY, _time);
+        }
     }
 }
