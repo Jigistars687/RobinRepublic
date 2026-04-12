@@ -10,7 +10,6 @@ public class BuilderPlacer : MonoBehaviour
 
 
     [SerializeField] private Button _undoButton;
-    [SerializeField] private Button _rotateButton;
 
     private Building _currentBuilding = null;
     private int _currentBuildingPrice = 0;
@@ -19,12 +18,10 @@ public class BuilderPlacer : MonoBehaviour
     void OnEnable()
     {
         _undoButton.onClick.AddListener(HandleUndo);
-        _rotateButton.onClick.AddListener(() => RotateBuilding(_currentBuilding.transform));
     }
     private void OnDisable()
     {
         _undoButton.onClick.RemoveAllListeners();
-        _rotateButton.onClick.RemoveAllListeners();
     }
     private void Start()
     {
