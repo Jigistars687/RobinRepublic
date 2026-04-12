@@ -7,6 +7,7 @@ public class SelectebleObject : MonoBehaviour
     [SerializeField] private FieldConfig _fieldConfig;
     [SerializeField] private GameObject _gridTexture;
     [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private GameObject _parentObject; [Tooltip("родительский объект на случай отстуви€ мешрендерера")]
 
     public int XSize = 2;
     public int ZSize = 2;
@@ -15,13 +16,14 @@ public class SelectebleObject : MonoBehaviour
     private GameObject _central;
     public bool _isVisible = true;
 
-    // ÷ентральный collider дл€ всей сетки
     private BoxCollider _centralCollider;
     public BoxCollider CentralCollider => _centralCollider;
 
     public void GridCells()
     {
-            _meshRenderer.enabled = false;
+            if (_meshRenderer  == null) _parentObject.SetActive(false);
+            else _meshRenderer.enabled = false;
+
             if (_fieldConfig == null) return;
 
             int targetNum = XSize * ZSize;
@@ -37,8 +39,6 @@ public class SelectebleObject : MonoBehaviour
                     Vector3 offset = new Vector3(x, 0, z) * _fieldConfig.CellSize - startOffset;
                     GameObject cell = Instantiate(_gridTexture, transform.position + offset, Quaternion.identity, transform);
                     cell.transform.localScale = new Vector3(1, 1, 1) * _fieldConfig.CellSize;
-
-                    // ”дал€ем коллайдеры у визуальных клеток (делаем их "пустышками")
                     var existingCollider = cell.GetComponent<Collider>();
                     if (existingCollider != null) Destroy(existingCollider);
 
@@ -57,9 +57,7 @@ public class SelectebleObject : MonoBehaviour
                 _central.layer = 7;
 
                 _centralCollider = _central.AddComponent<BoxCollider>();
-                // Ўирина и глубина по конфигу, высота Ч одна €чейка (можно изменить при надобности)
                 _centralCollider.size = new Vector3(XSize * _fieldConfig.CellSize, _fieldConfig.CellSize, ZSize * _fieldConfig.CellSize);
-                // ѕоднимаем центр на половину высоты, чтобы collider сто€л над землЄй (если нужно)
                 _centralCollider.center = new Vector3(0f, _fieldConfig.CellSize * 0.5f, 0f);
                 _centralCollider.isTrigger = false;
             }
@@ -78,11 +76,9 @@ public class SelectebleObject : MonoBehaviour
                 cell.layer = 0; 
             }
         }
-        _meshRenderer.enabled = true;
+        if(_meshRenderer == null) _parentObject.SetActive(false);
+        else _meshRenderer.enabled = true;
         _central.layer = 0;
-        // ќтключаем центральный коллайдер (при очистке или после размещени€)
-        //if (_centralCollider != null)
-        //    _centralCollider.gameObject.SetActive(false);
     }
 
     private void Start()
