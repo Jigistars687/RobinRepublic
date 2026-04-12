@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1140fa3fc3427e545a8cb262b22e85a6, type: 3}
-  m_Name: Building_Terrace
+  m_Name: BuildingTEst1
   m_EditorClassIdentifier: Assembly-CSharp::BuildingConfig
-  Price: 99
-  Prefab: {fileID: 4721977094975959159, guid: 1658d741063e6274ca73484f2e1000cb, type: 3}
-  PreviewPrefab: {fileID: 4721977094975959159, guid: c91188bceaf668448ac57b03cc873118, type: 3}
+  Price: 100
+  Description: Cube
+  Category: Cube
+  Icon: {fileID: 0}
+  Prefab: {fileID: 1892069547552043724, guid: da490f330efef234b912448af6b2d00a, type: 3}
+  PreviewPrefab: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
