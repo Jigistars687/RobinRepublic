@@ -61,8 +61,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5753601, y: 1.5753601, z: 1.5753601}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.9999999, y: 1.9999999, z: 1.9999999}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4270662426461998804}
   - {fileID: 2332725941082443505}
@@ -85,7 +85,7 @@ MonoBehaviour:
   _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
   _meshRenderer: {fileID: 0}
   _parentObject: {fileID: 1485335590495495074}
-  XSize: 6
+  XSize: 4
   ZSize: 3
   _isVisible: 1
 --- !u!114 &4247640239282760809

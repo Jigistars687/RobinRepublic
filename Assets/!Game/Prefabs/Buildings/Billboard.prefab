@@ -85,7 +85,7 @@ MonoBehaviour:
   _meshRenderer: {fileID: 0}
   _parentObject: {fileID: 1951725680673210439}
   XSize: 2
-  ZSize: 2
+  ZSize: 11
   _isVisible: 1
 --- !u!114 &4277539674890015558
 MonoBehaviour:

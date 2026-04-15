@@ -268,7 +268,7 @@ Light:
   serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8194,8 +8194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   config:
-    panSpeed: 200
-    zoomSpeed: 1125
+    panSpeed: 550
+    zoomSpeed: 3375
     minX: -50
     maxX: 50
     minZ: -67

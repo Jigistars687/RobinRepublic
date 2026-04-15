@@ -52,8 +52,8 @@ MonoBehaviour:
   _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
   _meshRenderer: {fileID: 0}
   _parentObject: {fileID: 5643818614777916436}
-  XSize: 6
-  ZSize: 10
+  XSize: 10
+  ZSize: 19
   _isVisible: 1
 --- !u!114 &4839085430873039839
 MonoBehaviour:
@@ -117,6 +117,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1759332500997499730, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233776420877250601, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dcc7fc3ccc736af44af32a2305f83129, type: 2}
     - target: {fileID: 2312091145117086049, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -168,6 +176,10 @@ PrefabInstance:
     - target: {fileID: 6718177990218657398, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718177990218657398, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8343607233406129080, guid: 71be4066b3bc28146a39b7b137c139a9, type: 3}
       propertyPath: m_Layer
@@ -252,6 +264,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5694059874591286030, guid: f9fe5c7d961fba049a9c6b6e23c63bb5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0af68a1c47da29c4292c03711a02322e, type: 2}
     - target: {fileID: 8487167654232718067, guid: f9fe5c7d961fba049a9c6b6e23c63bb5, type: 3}
       propertyPath: m_Layer
       value: 7

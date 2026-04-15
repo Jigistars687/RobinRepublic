@@ -52,7 +52,7 @@ MonoBehaviour:
   _gridTexture: {fileID: 8499073759626707886, guid: b9bea7f9ea989b742ba66d628f8abe83, type: 3}
   _meshRenderer: {fileID: 0}
   _parentObject: {fileID: 6992197985661409738}
-  XSize: 5
+  XSize: 7
   ZSize: 2
   _isVisible: 1
 --- !u!114 &-3403078166196210823
